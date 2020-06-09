@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="./css/basic_javascript_3.js">
+  
+  </script>
+
+</head>
+
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>Outside myFunction() carName is undefined.</p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<p id="try">Click this button th change the color of this paragraph</p>
+
+<button onclick="myFunction1()">Dare ya!</button>
+
+<p>Below should be varius and sundry maths<br></p>
+
+<p><br>Addition: 35 + 9 =</p>
+<p id="banjo"></p>
+<p><br>Subtraction: 27 - 17 =</p>
+<p id="Math1"></p>
+<p><br>Multiplication: 5 x 9 =</p>
+<p id="Math2"></p>
+<p><br>Division: 50 ÷ 4 =</p>
+<p id="Math3"></p>
+
+<p id="Math4"></p>
+
+
+<script>
+myFunction();
+
+function myFunction() {
+  var carName = "Volvo";
+  document.getElementById("demo1").innerHTML =
+  typeof carName + " " + carName;
+}
+
+document.getElementById("demo2").innerHTML =
+typeof carName;
+
+function myFunction1() {
+  var d = document.getElementById("try");
+  d.style.color = "olivedrab" ;
+}
+
+var x = 35 + 9;
+document.getElementById("banjo").innerHTML = x;
+
+var e = 27 - 17;
+document.getElementById("Math1").innerHTML = e;
+
+var d = 5 * 9;
+  document.getElementById("Math2").innerHTML = d;
+
+
+var c = 50 / 4;
+    document.getElementById("Math3").innerHTML = c;
+
+</script>
+
+</body>
+</html>
