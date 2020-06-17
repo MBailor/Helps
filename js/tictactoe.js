@@ -11,13 +11,13 @@ function placeXOrO(squareNumber) {
   // This condition ensures a square hasn't been selected already. 
   // The .some() method is used to check each element of selectedSquare array to
   // See if it contains the square number clicked on. 
-  if (selectedSquares.some(element => element.includes(squareNumber))) {
+  if (!selectedSquares.some(element => element.includes(squareNumber))) {
     // This variable retrieves the html element id that was clicked. 
     let select = document.getElementById(squareNumber);
     // This condition checks who's turn it is.
     if (activePlayer === 'X') {
       // If activePlayer is equal to 'X', the x.png is placed in HTML.
-      select.style.backgroundImage = 'url("/images/microx.png")'
+      select.style.backgroundImage = 'url("images/microx.png")'
     // activePlayer may only be 'X' or 'O' so, if not 'X' it must be 'O'
     } else {
         // If activePlayer is equal to 'O', the o.png is placed in HTML.
@@ -75,7 +75,7 @@ function placeXOrO(squareNumber) {
 }
 
 //This function parses the selectedSquares array to search for win conditions. 
-// drawWinLinw function is called to draw line if condition is met.
+// drawWinLine function is called to draw line if condition is met.
 function checkWinConditions() {
   // X O, 1, 2 condition.
   if        (arrayIncludes('OX', '1X', '2X')) { drawWinLine(50, 100, 558, 100); }
@@ -127,7 +127,7 @@ function arrayIncludes(squareA, squareB, squareC) {
   const a = selectedSquares.includes(squareA);
   const b = selectedSquares.includes(squareB);
   const c = selectedSquares.includes(squareC);
-  // If the 3 varianles we pass are all included in our array true is 
+  // If the 3 variables we pass are all included in our array true is 
   // returned and our else if condition executes the drawWinLine function.
   if (a === true && b === true && c === true)  { return true; }
  }
@@ -136,7 +136,7 @@ function arrayIncludes(squareA, squareB, squareC) {
 
 }
 
-// This function makes out body element teporarily unclickable.
+// This function makes our body element teporarily unclickable.
 function disableClick() {
   // This makes out body unclickable.
   body.style.pointerEvents = 'none';
@@ -144,7 +144,7 @@ function disableClick() {
   setTimeout(function() {body.style.pointerEvents = 'auto';}, 1000);
 }
 
-// This finction takes a string parameter of the path you set earlier for
+// This function takes a string parameter of the path you set earlier for
 // placement sound ('./media/place.mp3')
 function audio(audioURL) {
   //We creat a new audio object and we pass the path as a parameter.
@@ -167,7 +167,7 @@ function drawWinLine (coordX1, coordY1, coordX2, coordY2) {
         // This line indicates where the end of a lines x axis is.
         x2 = coordX2,
         // This line indicates where the end of a lines y axis is.
-        y2 = coorxY2,
+        y2 = coordY2,
         // This variable stores temporary axis data we update in our animation loop.
         x = x1,
         // This cariable stores temporary axis data we update in our animation loop.
@@ -229,7 +229,7 @@ audio('./media/WinGame.mp3');
 animateLineDrawing();
 //This line waits 1 second,
 //Then, clears canvas, resets game, and allows clicking again.
-setTimeout(function () {  clear(); resetGame(); }, 1000);
+setTimeout(function () { clear(); resetGame(); }, 1000);
 }
 
 
