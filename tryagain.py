@@ -48,11 +48,19 @@ class ParentWin(Frame):
 
     def movee(self, days=1):
         source_file = self.folderPath.get()
-        dest_file = self.folderDest.get()
+        destination = self.folderDest.get()
         files = os.listdir(source_file)
-        mod_time = os.path.getmtime(source_file)
-        if (time.time() - mod_time) / 3600 < 24*days:
-            shutil.move(mod_time, self.folderDest.get())
+        now = dt.datetime.now()
+        file_time = now - dt.timedelta(hours=24)
+
+    def mod_time(file):
+        return (os.path.getmtime(file))
+        for file in files:
+            abspath = os.path.join(source_file, file)
+            file_time = os.path.getmtime(abspath)
+            print(file_time)
+            if file.endswith('.txt') and mod_time > now:
+                shutil.move(abspath, destination)
 
     
      
