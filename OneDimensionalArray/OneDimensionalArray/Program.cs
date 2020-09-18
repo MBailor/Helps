@@ -70,7 +70,7 @@ class Program
 
             if (itemChose)
             {
-                Console.WriteLine(choseItem<strList>);
+                Console.WriteLine(strList);
             }
         }
         catch (IndexOutOfRangeException)
