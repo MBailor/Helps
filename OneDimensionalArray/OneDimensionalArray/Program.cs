@@ -60,6 +60,9 @@ class Program
             strList.Add("Fish");
             strList.Add("Pancake");
             strList.Add("Kitten");
+            strList.Add("Slide");
+            strList.Add("Triangle");
+            strList.Add("Eggplant");
 
             Console.WriteLine("Chose and item from the list by it's index number(0-8)");
             int choseItem = Convert.ToInt32(Console.ReadLine());
@@ -67,7 +70,7 @@ class Program
 
             if (itemChose)
             {
-                Console.WriteLine(strList);
+                Console.WriteLine(choseItem<strList>);
             }
         }
         catch (IndexOutOfRangeException)
