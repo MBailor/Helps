@@ -92,6 +92,7 @@ namespace ConsoleApp6PartAssignment
 
 
             List<string> officeSupplies = new List<string>();
+            List<int> dupIndex = new List<int>();
             officeSupplies.Add("Pencil");
             officeSupplies.Add("Pen");
             officeSupplies.Add("Scissor");
@@ -103,30 +104,32 @@ namespace ConsoleApp6PartAssignment
             string entSearch = Console.ReadLine();
             string stringSearch1 = Convert.ToString(officeSupplies);
             int getStringIndex = officeSupplies.FindIndex(s => String.Equals(s, entSearch));
+            int getStringIndex1 = officeSupplies.FindLastIndex(t => String.Equals(t, entSearch));
             bool getIndexString = Convert.ToBoolean(getStringIndex);
             bool isAMatch = false;
-            int index = 0;
+            
 
             
             
 
-                foreach (string supply in officeSupplies)
+                foreach (var supply in officeSupplies)
                 {
-                    Console.WriteLine($"{index}: {supply}");
+                    
                     
 
                     if (officeSupplies.Contains(entSearch))
                     {
-
-                        Console.WriteLine("You have chosen the office supply, " + entSearch + "Which has an idex of:" + getStringIndex + "");
-                        Console.WriteLine("You have chosen the office supply, " + entSearch + " Which has an idex of:" + getStringIndex + "");
-                        index++;
+                        
+                        Console.WriteLine("You have chosen the office supply, " + entSearch + " Which has an idex of: " + getStringIndex + " and " + getStringIndex1 + "");
+                        
                         Console.ReadLine();
+                        return;
                     }
                     else
                     {
                         Console.WriteLine("You have chosen an office supply that is currently unavailable.");
                         Console.ReadLine();
+                        return;
                     }
                 }
 
