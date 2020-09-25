@@ -1,0 +1,7 @@
+C:\Users\Student\Desktop\Basic_C#_Programs\C# Assignments\MethodsAssignment\MethodsAssignment\obj\Debug\MethodsAssignment.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\Basic_C#_Programs\C# Assignments\MethodsAssignment\MethodsAssignment\obj\Debug\MethodsAssignment.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Basic_C#_Programs\C# Assignments\MethodsAssignment\MethodsAssignment\bin\Debug\MethodsAssignment.exe.config
+C:\Users\Student\Desktop\Basic_C#_Programs\C# Assignments\MethodsAssignment\MethodsAssignment\bin\Debug\MethodsAssignment.exe
+C:\Users\Student\Desktop\Basic_C#_Programs\C# Assignments\MethodsAssignment\MethodsAssignment\bin\Debug\MethodsAssignment.pdb
+C:\Users\Student\Desktop\Basic_C#_Programs\C# Assignments\MethodsAssignment\MethodsAssignment\obj\Debug\MethodsAssignment.exe
+C:\Users\Student\Desktop\Basic_C#_Programs\C# Assignments\MethodsAssignment\MethodsAssignment\obj\Debug\MethodsAssignment.pdb
